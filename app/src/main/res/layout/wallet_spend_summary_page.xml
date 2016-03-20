@@ -36,7 +36,7 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:text="clear"
         android:layout_alignParentBottom="true"
         android:background="@color/angry_btn_color"
