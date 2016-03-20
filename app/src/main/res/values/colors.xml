@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF555F</color>
+    <color name="colorPrimaryDark">#5c211f</color>
+    <color name="colorPrimaryDark2">#5c321f</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="calm_btn_color">#55FF55</color>
+    <color name="norm_btn_color">#076c86</color>
+    <color name="angry_btn_color">#990000</color>
+</resources>
