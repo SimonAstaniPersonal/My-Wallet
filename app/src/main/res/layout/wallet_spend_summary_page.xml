@@ -39,7 +39,7 @@
         android:layout_height="50dp"
         android:text="clear"
         android:layout_alignParentBottom="true"
-        android:background="@color/angry_btn_color"
+        android:background="@drawable/action_btn"
         android:textColor="#FFF"
         android:textStyle="bold"
         android:onClick="clearSummary"/>

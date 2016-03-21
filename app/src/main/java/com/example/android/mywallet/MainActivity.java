@@ -45,6 +45,14 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    FileInputStream inputStream;
+    FileOutputStream outputStream;
+    String file_output_data = "";
+    String filename_amount = "cash_file";
+    String filename_summary = "summary_file";
+    String file_input_data = "";
+    File file;
+    int ch = 0;
     // 1 for main page
     // 2 for add page
     // 3 for spend page
@@ -57,7 +65,45 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getValuesIfStored();
         goToFirstPage();
+    }
+    public void getValuesIfStored(){
+        try{
+            inputStream = openFileInput(filename_amount);
+            //file_input_data = inputStream.read();
+            if(file_input_data.length()!=0) {
+                file_input_data = "";
+            }
+            while( (ch = (inputStream.read())) != -1) {
+                String temp = ""+(char)ch;
+                file_input_data += temp;
+            }
+            inputStream.close();
+            money_in_wallet = Integer.parseInt(file_input_data);
+        }
+        catch (IOException e){
+            money_in_wallet = 0;
+        }
+
+
+
+        try{
+            inputStream = openFileInput(filename_summary);
+            //file_input_data = inputStream.read();
+            if(file_input_data.length()!=0) {
+                file_input_data = "";
+            }
+            while( (ch = (inputStream.read())) != -1) {
+                String temp = ""+(char)ch;
+                file_input_data += temp;
+            }
+            inputStream.close();
+            summary_of_expenses = file_input_data;
+        }
+        catch (IOException e){
+            summary_of_expenses = "";
+        }
     }
 
     @Override
@@ -132,9 +178,26 @@ public class MainActivity extends AppCompatActivity {
     }
     public void saveMoney(String amount) {
         money_in_wallet +=  Integer.parseInt(amount);
+
+
+        file = new File(this.getFilesDir(), filename_amount);
+        try {
+            file_output_data = String.valueOf(money_in_wallet);
+            outputStream = openFileOutput(filename_amount, Context.MODE_PRIVATE);
+            outputStream.write(file_output_data.getBytes());
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
+
         goToFirstPage();
         Toast toast = Toast.makeText(this, "Added Rs." + String.valueOf(amount) + ".", Toast.LENGTH_SHORT);
         toast.show();
+
+
     }
     public void deleteMoney(String amount, String category) {
         if(money_in_wallet - Integer.parseInt(amount) < 0) {
@@ -143,7 +206,34 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             money_in_wallet -= Integer.parseInt(amount);
+
+
+            file = new File(this.getFilesDir(), filename_amount);
+            try {
+                file_output_data = String.valueOf(money_in_wallet);
+                outputStream = openFileOutput(filename_amount, Context.MODE_PRIVATE);
+                outputStream.write(file_output_data.getBytes());
+                outputStream.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+
             summary_of_expenses += "Spent Rs." + amount +" on " + category + "\n";
+
+
+            file = new File(this.getFilesDir(), filename_summary);
+            try {
+                file_output_data = summary_of_expenses;
+                outputStream = openFileOutput(filename_summary, Context.MODE_PRIVATE);
+                outputStream.write(file_output_data.getBytes());
+                outputStream.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
             goToFirstPage();
             Toast toast = Toast.makeText(this, "Spent Rs." + String.valueOf(amount) + ".", Toast.LENGTH_SHORT);
             toast.show();
@@ -151,6 +241,20 @@ public class MainActivity extends AppCompatActivity {
     }
     public void clearSummary_text() {
         summary_of_expenses = "";
+
+
+        file = new File(this.getFilesDir(), filename_summary);
+        try {
+            file_output_data = summary_of_expenses;
+            outputStream = openFileOutput(filename_summary, Context.MODE_PRIVATE);
+            outputStream.write(file_output_data.getBytes());
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
         goToFirstPage();
         Toast toast = Toast.makeText(this, "Expenses summary has been deleted", Toast.LENGTH_SHORT);
         toast.show();

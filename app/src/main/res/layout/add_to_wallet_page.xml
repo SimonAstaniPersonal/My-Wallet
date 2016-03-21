@@ -45,9 +45,9 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:text="add"
+            android:text="ADD"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
+            android:background="@drawable/action_btn"
             android:textColor="#FFF"
             android:textStyle="bold"
             android:onClick="addAmount"/>
