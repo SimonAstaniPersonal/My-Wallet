@@ -1,2 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/home/arjun/GitClone/My-Wallet/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
+        <dex dex="/home/arjun/GitClone/My-Wallet/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.0_7520436ac99e981d906683331119c81935207ec0.jar" />
+    </item>
+    <item
+        jar="/home/arjun/GitClone/My-Wallet/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
+        <dex dex="/home/arjun/GitClone/My-Wallet/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.0_15e44b7f3435865fd05ef0909dc2953bc9ba34ad.jar" />
+    </item>
+    <item
+        jar="/home/arjun/GitClone/My-Wallet/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="292a9fa091757208efa65e77eef63088247e51f3">
+        <dex dex="/home/arjun/GitClone/My-Wallet/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.0_a75dd796b1acf0863c48c0d553fd65452032873d.jar" />
+    </item>
+    <item
+        jar="/home/arjun/GitClone/My-Wallet/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/libs/internal_impl-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6e239441500605809818997dd63b62a947195f8c">
+        <dex dex="/home/arjun/GitClone/My-Wallet/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.0_b08466b86836ab7579fe11042fe1cdff33f6f17a.jar" />
+    </item>
+    <item
+        jar="/home/arjun/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.0/support-annotations-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
+        <dex dex="/home/arjun/GitClone/My-Wallet/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.0_27d9e81e3c7900abf0a5e76ff22ee5d8312247b0.jar" />
+    </item>
+    <item
+        jar="/home/arjun/GitClone/My-Wallet/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
+        <dex dex="/home/arjun/GitClone/My-Wallet/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.0_a3ede9b080d8541bd11b6aa5307f867b2f8b096c.jar" />
+    </item>
+
+</items>
