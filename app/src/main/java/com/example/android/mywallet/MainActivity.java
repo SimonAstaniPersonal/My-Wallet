@@ -109,7 +109,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (currentPage == 1) {
-            new AlertDialog.Builder(this)
+            System.exit(0);
+            /*new AlertDialog.Builder(this)
                     .setMessage("Are you sure you want to exit?")
                     .setCancelable(false)
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -118,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     })
                     .setNegativeButton("No", null)
-                    .show();
+                    .show();*/
         }
         if (currentPage == 2) {
             goToFirstPage();
